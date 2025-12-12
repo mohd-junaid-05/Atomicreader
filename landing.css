@@ -1,0 +1,11 @@
+.nav-bar-bg{
+    background-color: #c7a47b;
+}
+body{
+    background-color:#FBF7F0 ;
+}
+
+
+.hero-section{
+    display: flex;
+}
