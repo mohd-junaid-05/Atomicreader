@@ -1,11 +1,21 @@
 .nav-bar-bg{
     background-color: #c7a47b;
 }
-body{
-    background-color:#FBF7F0 ;
+.main-page{
+    background-color: #fffaeb;
+    width: 100%;
 }
-
-
 .hero-section{
     display: flex;
+}
+.container{
+    width: 100%;
+    background-color: #fffaeb;
+}
+
+html, body {
+    width: 100%; 
+    overflow-x: hidden;
+    background-color: #fffaeb;
+
 }
