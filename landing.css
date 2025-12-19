@@ -4,6 +4,15 @@
   padding: 0;
 }
 
+.heading{
+    font-family: 'Merriweather';
+    font-size: 6vh;
+    font-weight: bold;
+    color: black;
+       
+                
+}
+
 .nav-bar-bg{
     background-color: #c7a47b;
 }
@@ -96,28 +105,62 @@ html, body {
     box-shadow: 0 10px 20px rgba(105, 105, 105, 0.2);
 }
 
+
+
+
+
+
+
 /* starting content section */
-.content-setion{
-    padding: auto;
+.content-section{
+    padding: 40px;
+   
+   width:max-content;
+   height: max-content;
+   background-image: url(images/IMG_20251218_110036070.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+ 
+
+   
 }
 .content-setion-flex{
-padding: 20px;
+    padding: 20px;
+    width: max-content;
+    
+    border-radius: 20px;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 237, 216, 0.4); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.content-section-card{
+    background-color: #ffffff;
+    display: inline-block;
+    height: max-content;
+    width: max-content;
+    
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+   
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1
 
 }
-.content-setion-card{
-    height: max-content;
-    width: 90%;
-    background-color:#ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-   
-
+.content-section-card:hover {
+    background-color: #e9e2c6 !important; 
+     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(105, 105, 105, 0.2);
 }
 .content-dropdown{
    padding: 10px;
     text-align: center;
-    background-color: #a38565;
+    background-color: #caa883;
     border-radius: 10px;
     width: 50vh;
     margin: 10px;
@@ -148,4 +191,7 @@ p{
     color: #7A7A7A;
      font-size: 15px;
      font-family: 'roboto';
+}
+li{
+    font-family: 'roboto';
 }
