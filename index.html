@@ -15,222 +15,218 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg nav-bar-bg">
+    <!-- NAVBAR - Bootstrap responsive navigation -->
+    <nav class="navbar navbar-expand-lg nav-bar-bg py-3">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="images/skill projects logo.png" style="height: 5vh; width: 5vh; border-radius: 30px;" />
+                <img src="images/skill projects logo.png" 
+                     style="height: 5vh; width: 5vh; border-radius: 30px;" 
+                     alt="Logo" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" 
+                    aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
+                <div class="navbar-nav ms-auto">
+                    <!-- CHANGE: Added ms-auto to align nav items to the right -->
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#features">Features</a>
                     <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- HERO SECTION - Optimized Bootstrap layout -->
     <div class="main-page container-fluid py-5">
-        <div class="row align-items-center g-5">
-
-            <div class="col-12 col-lg-6 order-2 order-lg-1">
-                <div class="hero-section-text text-center d-lg-none p-5">
-                    <h1 style="font-family: 'Merriweather'; font-size: 6vh; font-weight: bold ;">
-                        Small habits. Big results.</h1>
-                    <p>Transform your life one small step
-                        at a time. James Clear’s Atomic Habits shows how consistent choices build remarkable results.
-                    </p>
-                    <button class="btn btn-secondary-cta">Learn More</button>
-                    <button class="btn btn-primary-cta">Buy Now</button>
+        <div class="container">
+            <!-- CHANGE: Added .container inside container-fluid for better max-width control -->
+            <div class="row align-items-center g-4 g-lg-5">
+                <!-- CHANGE: Changed g-5 to g-lg-5 for responsive gap spacing -->
+                
+                <div class="col-12 col-lg-6 order-2 order-lg-1 d-flex align-items-center">
+                    <!-- CHANGE: Added d-flex align-items-center for vertical centering -->
+                    <div class="hero-section-text">
+                        <!-- CHANGE: Removed separate d-lg-none and d-none d-lg-block divs, 
+                                    now using one responsive element -->
+                        <h1 class="hero-title">
+                            Small habits. Big results.
+                        </h1>
+                        <!-- CHANGE: Created hero-title class for responsive sizing -->
+                        <p class="hero-paragraph">
+                            Transform your life one small step at a time. James Clear's Atomic Habits 
+                            shows how consistent choices build remarkable results.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <!-- CHANGE: Used Bootstrap flex utilities, gap-3 for spacing -->
+                            <button class="btn btn-secondary-cta">Learn More</button>
+                            <button class="btn btn-primary-cta">Buy Now</button>
+                        </div>
+                    </div>
                 </div>
-                <div class=" d-none d-lg-block hero-section-text p-5">
-                    <h1 style="font-family: 'Merriweather'; font-size: 10vh; font-weight: bold ;">
-                        Small habits. Big results.</h1>
-                    <p style="color: #7A7A7A; font-size: 20px;">Transform your life one small step
-                        at a time. James Clear's Atomic Habits shows how consistent choices build remarkable results.
-                    </p>
-                    <button class="btn btn-secondary-cta">Learn More</button>
-                    <button class="btn btn-primary-cta">Buy Now</button>
+
+                <div class="col-12 col-lg-6 order-1 order-lg-2 text-center">
+                    <!-- CHANGE: Used order-1/order-lg-2 instead of inline styles for mobile/desktop reordering -->
+                    <img src="images/hero-section-image.png" alt="Hero Image" 
+                         class="img-fluid hero-image" />
+                    <!-- CHANGE: Used img-fluid for automatic responsive sizing -->
                 </div>
             </div>
-
-            <div class="col-12 col-lg-6 text-center order-1 order-lg-2">
-                <img src="images/hero-section-image.png" alt="Hero Image" class="img-fluid"
-                    style="height: 70vh; width: 70vh; margin-right: 30px;" />
-            </div>
-
         </div>
     </div>
 
+    <!-- FEATURES SECTION - Improved Bootstrap grid layout -->
     <div class="features-section container-fluid" id="features">
         <div class="container">
-
-            <h1 class="text-center mb-5 heading"> What You’ll Gain</h1>
+            <!-- CHANGE: Added .container for max-width constraint on large screens -->
+            <h1 class="heading text-center mb-5">
+                Why Most People Fail at Building Habits
+            </h1>
 
             <div class="row g-4">
-
-                <div class="col-12 col-lg-4">
+                <!-- CHANGE: g-4 for consistent 1.5rem gap on all breakpoints -->
+                
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <!-- CHANGE: Added col-sm-6 for tablet view (2 columns), was only col-12 col-lg-4 -->
                     <div class="features-section-card p-4 shadow-sm h-100">
-                        <img src="images/bricks.png" class="build-image mb-3" alt="Obvious Icon" />
-                        <h3 class="features-section-card-heading">Build habits that stick</h3>
-                        <p>Stop relying on motivation.</p>
+                        <img src="images/goal--v1.webp" class="build-image mb-3" alt="Goal Icon" />
+                        <!-- CHANGE: Added alt text for accessibility -->
+                        <h3 class="features-section-card-heading">You Set Big Goals, Not Systems</h3>
+                        <p>You wait for the "perfect time" to change everything at once. Three days later, motivation
+                            fades and you're back to old patterns. You need a system, not just willpower.</p>
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-4">
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-lg-4">
                     <div class="features-section-card p-4 shadow-sm h-100">
-                        <img src="images/burger.png" class="build-image mb-3" alt="Attractive Icon" />
-                        <h3 class="features-section-card-heading">Break bad habits permanently</h3>
-                        <p>Replace willpower with systems.</p>
+                        <img src="images/human brain.png" class="build-image mb-3" alt="Brain Icon" />
+                        <h3 class="features-section-card-heading">Motivation Comes in Spikes</h3>
+                        <p>You feel fired up on day one, excited on day two, bored by day three. Life gets busy and your
+                            new habit disappears. You need a method that sticks even when motivation dies.</p>
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-4">
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-lg-4">
                     <div class="features-section-card p-4 shadow-sm h-100">
-                        <img src="images/number-1_8068013.png" class="build-image mb-3" alt="Easy Icon" />
-                        <h3 class="features-section-card-heading">Identity-based growth</h3>
-                        <p>Become the type of person who succeeds.</p>
+                        <img src="images/progress track.png" class="build-image mb-3" alt="Progress Icon" />
+                        <h3 class="features-section-card-heading">You Don't Track Progress</h3>
+                        <p>Small wins stay invisible. You work hard but can't see the progress, so you quit early
+                            thinking nothing's changing. Without measurement, momentum dies fast.</p>
                     </div>
                 </div>
 
+                <!-- Card 4 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="features-section-card p-4 shadow-sm h-100">
+                        <img src="images/time-management-display-ready-asset-vector.jpg" 
+                             class="build-image mb-3" alt="Time Management Icon" />
+                        <h3 class="features-section-card-heading">You Jump Between Methods</h3>
+                        <p>One week it's this productivity hack, next week it's a different app. You never stick with
+                            one system long enough to see results. Consistency is the real game.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="features-section-card p-4 shadow-sm h-100">
+                        <img src="images/willpower.png" class="build-image mb-3" alt="Willpower Icon" />
+                        <h3 class="features-section-card-heading">You Rely on Willpower Alone</h3>
+                        <p>Willpower is a limited resource. You try to force yourself to change through pure discipline,
+                            but it exhausts you fast. You need an environment designed to support habits.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="features-section-card p-4 shadow-sm h-100">
+                        <img src="images/number-1_8068013.png" class="build-image mb-3" alt="Root Cause Icon" />
+                        <h3 class="features-section-card-heading">You Ignore the Real Root Cause</h3>
+                        <p>You focus on what to do, not why it matters or how your identity shapes behavior. Real change
+                            happens when you become the type of person who does the thing.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- ATOMIC WORKS SECTION - Bootstrap responsive wrapper -->
+    <div class="atomic-works-section container-fluid">
+        <div class="container">
+            <!-- CHANGE: Wrapped custom grid in Bootstrap container for better structure -->
+            <h1 class="heading text-center mb-5">How Atomic Habits Works</h1>
 
-    <div class="content-section container-fluid">
-        <h1 class="text-center mb-5 heading">Content</h1>
-        <div class="row d-flex flex-row justify-content-center">
-
-
-            <div class="content-setion-flex col-8 d-flex flex-column justify-content-center">
-                
-
-                    <div class="content-section-card shadow-sm col-11" onclick="togglechange1()"
-                        style="cursor: pointer; ">
-                        <h2 class="content-section-heading">FUNDAMENTALS</h2>
-                        <div class="tooglecard" id="dropdown1" onclick="togglecard1()">
-                            <p class="content-section-paragraph">Why tiny changes make a big difference</p>
-                            <h5>CHAPTERS </h5>
-                            <ul style=" padding-left:18px; font-size:0.95rem;">
-                                <li>Why Tiny Changes Make a Big Difference</li>
-                                <li>The Surprising Power of Atomic Habits</li>
-                                <li>How Your Habits Shape Your Identity (and Vice Versa)</li>
-                                <li>How to Build Better Habits in 4 Simple Steps</li>
-                            </ul>
+            <div class="row">
+                <div class="col-12">
+                    <!-- CHANGE: Added col-12 wrapper for proper Bootstrap structure -->
+                    <div class="atomic-works-grid">
+                        <!-- CHANGE: Custom grid remains but now properly nested in Bootstrap -->
+                        
+                        <div class="atomic-works-section-card">
+                            <h1 class="atomic-works-section-card-number">1</h1>
+                            <h3 class="atomic-works-section-card-heading">Make It Obvious</h3>
+                            <p class="atomic-works-section-card-paragraph">Design your environment so good habits are
+                                visible and convenient. Make bad habits friction-filled and hard to do.</p>
                         </div>
 
-
-
-                    </div>
-                    <div class="content-section-card shadow-sm col-11" onclick="togglechange2()"
-                        style="cursor: pointer;">
-                        <h2 class="content-section-heading">THE 1st LAW </h2>
-                        <div class="tooglecard" id="dropdown2" onclick="togglecard2()">
-                            <p>Design your environment for success</p>
-                            <h5>CHAPTERS </h5>
-                            <ul style=" padding-left:18px; font-size:0.95rem;">
-                                <li>The Man Who Didn’t Look Right</li>
-                                <li>The Best Way to Start a New Habit</li>
-                                <li>Motivation Is Overrated; Environment Often Matters More</li>
-                                <li>The Secret to Self-Control</li>
-                            </ul>
+                        <div class="atomic-works-section-card">
+                            <h1 class="atomic-works-section-card-number">2</h1>
+                            <h3 class="atomic-works-section-card-heading">Make It Attractive</h3>
+                            <p class="atomic-works-section-card-paragraph">Pair habits you want with habits you already
+                                love. This makes the new behavior feel rewarding and worth repeating.</p>
                         </div>
 
-
-
-                    </div>
-                    <div class="content-section-card shadow-sm col-11" onclick="togglechange3()"
-                        style="cursor: pointer;">
-                        <h2 class="content-section-heading">THE 2nd LAW</h2>
-                        <div class="tooglecard" id="dropdown3" onclick="togglecard3()">
-                            <p>Make good habits irresistible</p>
-                            <h5>CHAPTERS </h5>
-                            <ul style=" padding-left:18px; font-size:0.95rem;">
-                                <li>How to Make a Habit Irresistible</li>
-                                <li>The Role of Family and Friends in Shaping Your Habits</li>
-                                <li>How to Find and Fix the Causes of Your Bad Habits</li>
-                            </ul>
+                        <div class="atomic-works-section-card">
+                            <h1 class="atomic-works-section-card-number">3</h1>
+                            <h3 class="atomic-works-section-card-heading">Make It Easy</h3>
+                            <p class="atomic-works-section-card-paragraph">Start so small it feels trivial. A 2-minute habit
+                                is easier than a 1-hour commitment. Build consistency first, intensity later.</p>
                         </div>
 
-
-
-                    </div>
-
-                    <div class="content-section-card shadow-sm col-11" onclick="togglechange4()"
-                        style="cursor: pointer;">
-                        <h2 class="content-section-heading">THE 3rd LAW</h2>
-                        <div class="tooglecard" id="dropdown4" onclick="togglecard4()">
-                            <p>Reduce friction and master consistency</p>
-                            <h5>CHAPTERS </h5>
-                            <ul style=" padding-left:18px; font-size:0.95rem;">
-                                <li>Walk Slowly, but Never Backward</li>
-                                <li>The Law of Least Effort</li>
-                                <li>How to Stop Procrastinating by Using the Two-Minute Rule</li>
-                                <li>How to Make Good Habits Inevitable and Bad Habits Impossible</li>
-                            </ul>
+                        <div class="atomic-works-section-card">
+                            <h1 class="atomic-works-section-card-number">4</h1>
+                            <h3 class="atomic-works-section-card-heading">Make It Satisfying</h3>
+                            <p class="atomic-works-section-card-paragraph">Track and celebrate wins. Your brain remembers
+                                actions that feel good. Immediate rewards create lasting habits.</p>
                         </div>
-
-
-
                     </div>
-
-                    <div class="content-section-card shadow-sm col-11" onclick="togglechange5()"
-                        style="cursor: pointer;">
-                        <h2 class="content-section-heading">THE 4th LAW</h2>
-                        <div class="tooglecard" id="dropdown5" onclick="togglecard5()">
-                            <p>Make progress visible and rewarding</p>
-                            <h5>CHAPTERS </h5>
-                            <ul style=" padding-left:18px; font-size:0.95rem;">
-                                <li>The Cardinal Rule of Behavior Change</li>
-                                <li>How to Stick with Good Habits Every Day</li>
-                                <li>How an Accountability Partner Can Change Everything</li>
-                            </ul>
-                        </div>
-
-
-
-                    </div>
-
-                    <div class="content-section-card shadow-sm col-11" onclick="togglechange6()"
-                        style="cursor: pointer;">
-                        <h2 class="content-section-heading">ADVANCED TACTICS</h2>
-                        <div class="tooglecard" id="dropdown6" onclick="togglecard6()">
-                            <p>From good to great</p>
-                            <h5>CHAPTERS </h5>
-                            <ul style=" padding-left:18px; font-size:0.95rem;">
-                                <li>The Truth About Talent (When Genes Matter and When They Don’t)</li>
-                                <li>The Goldilocks Rule: How to Stay Motivated in Life and Work</li>
-                                <li>The Downside of Creating Good Habits</li>
-                            </ul>
-                        </div>
-
-
-
-                    </div>
-
-                
+                </div>
             </div>
         </div>
     </div>
 
-
-
-
-
-
+    <!-- CTA SECTION - Bootstrap responsive structure -->
+    <div class="call-to-action-section container-fluid">
+        <div class="container">
+            <!-- CHANGE: Added container for max-width control -->
+            <div class="row">
+                <div class="col-12">
+                    <!-- CHANGE: Added col-12 for proper Bootstrap grid structure -->
+                    <div class="call-to-action-section-card text-center py-5">
+                        <!-- CHANGE: Changed margin m-5 to padding py-5 for better control -->
+                        <h1 class="call-to-action-section-heading">
+                            Ready to Build Habits That Last?
+                        </h1>
+                        <p class="call-to-action-section-paragraph">
+                            Join thousands of people who have transformed their lives with Atomic Habits. 
+                            Start small. Think big. Win big.
+                        </p>
+                        <button class="call-to-action-section-button">Start Your Journey</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
     <script src="landing.js"></script>
-
 </body>
+
 
 </html>

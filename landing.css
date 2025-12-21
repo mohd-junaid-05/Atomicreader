@@ -1,197 +1,278 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.heading{
+/* GLOBAL STYLES */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.heading {
     font-family: 'Merriweather';
-    font-size: 6vh;
+    /* CHANGE: Made font-size responsive using calc() and viewport units */
+    font-size: clamp(2rem, 6vw, 6vh);
     font-weight: bold;
     color: black;
-       
-                
 }
 
-.nav-bar-bg{
+/* NAVIGATION */
+.nav-bar-bg {
     background-color: #c7a47b;
 }
-.main-page{
+
+/* HERO SECTION */
+.main-page {
     background-color: #fffaeb;
+    background-attachment: fixed;
     width: 100%;
-    height: 100%;
+    /* CHANGE: Removed fixed height, let content flow naturally */
 }
 
-.hero-section{
-    display: flex;
+/* CHANGE: New responsive hero title class */
+.hero-title {
+    font-family: 'Merriweather';
+    /* CHANGE: Responsive font sizing - smaller on mobile, larger on desktop */
+    font-size: clamp(2.5rem, 8vw, 10vh);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
 }
 
-
-html, body {
-    width: 100%; 
-    overflow-x: hidden;
-   
+/* CHANGE: New responsive paragraph class */
+.hero-paragraph {
+    color: #7A7A7A;
+    /* CHANGE: Responsive font sizing */
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
-
-
-
-.features-section{
-    
-    background-color: #ffffff;
-    padding-top: 50px; 
-    padding-bottom: 50px; 
+/* CHANGE: New hero image class with responsive sizing */
+.hero-image {
+    /* CHANGE: Uses max-width instead of fixed dimensions for true responsiveness */
+    max-width: 100%;
+    height: auto;
+    max-height: 70vh;
 }
 
-
-.features-section-card{
-   
-    background-color: #fffaeb; 
-    border-radius: 20px;
-    text-align: center;
+/* BUTTONS */
+.btn {
+    font-family: 'serif';
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1;
-}
-
-.features-section-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    
-}
-    
-
-.build-image{
-    height: 10vh;
-    width: 10vh;
-}
-
-
-.features-section-card-heading{
-    font-family: 'Geom';
-    color: black;
+    padding: 10px 20px;
+    /* CHANGE: Added min-height for consistent button sizing */
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-primary-cta {
     background-color: #c7a47b !important;
     color: white !important;
-    border: 1px solid #c7a47b !important; 
-    height: min-content !important; 
-    font-family: 'serif';
-    padding: 10px 20px;
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1
-}
-.btn-primary-cta:hover {
-    background-color: #a38565 !important;
-     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(105, 105, 105, 0.2); 
+    border: 1px solid #c7a47b !important;
 }
 
+.btn-primary-cta:hover {
+    background-color: #a38565 !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(105, 105, 105, 0.2);
+}
 
 .btn-secondary-cta {
     background-color: transparent !important;
     color: #c7a47b !important;
     border: 2px solid #c7a47b !important;
-    height: min-content !important; 
-    font-family: 'serif';
-    padding: 8px 18px; 
-    margin-right: 10px;
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1
 }
+
 .btn-secondary-cta:hover {
-    background-color: #f0ead2 !important; 
-     transform: translateY(-5px);
+    background-color: #f0ead2 !important;
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(105, 105, 105, 0.2);
 }
 
-
-
-
-
-
-
-/* starting content section */
-.content-section{
-    padding: 40px;
-   
-   width:max-content;
-   height: max-content;
-   background-image: url(images/IMG_20251218_110036070.jpg);
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
- 
-
-   
-}
-.content-setion-flex{
-    padding: 20px;
-    width: max-content;
-    
-    border-radius: 20px;
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(255, 237, 216, 0.4); 
-    border: 1px solid rgba(255, 255, 255, 0.3);
+/* FEATURES SECTION */
+.features-section {
+    background: linear-gradient(
+        to bottom,
+        #fffaeb 0%,
+        #d9d9d9 25%,
+        #d9d9d9 60%,
+        rgba(217, 217, 217, 0) 100%
+    );
+    /* CHANGE: Responsive padding - smaller on mobile, larger on desktop */
+    padding: clamp(2rem, 5vw, 3rem) 1.5rem;
 }
 
-
-.content-section-card{
+.features-section-card {
     background-color: #ffffff;
-    display: inline-block;
-    height: max-content;
-    width: max-content;
-    
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-   
+    border-radius: 20px;
+    border-left: 10px solid #6f4518;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1
-
+    z-index: 1;
+    margin: 10px;
 }
-.content-section-card:hover {
-    background-color: #e9e2c6 !important; 
-     transform: translateY(-5px);
+
+.features-section-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #caa883;
+}
+
+.build-image {
+    /* CHANGE: Responsive image sizing */
+    height: clamp(60px, 10vw, 10vh);
+    width: clamp(60px, 10vw, 10vh);
+}
+
+.features-section-card-heading {
+    font-family: 'Geom';
+    color: black;
+    /* CHANGE: Responsive font sizing */
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin: 1rem 0;
+}
+
+/* ATOMIC WORKS SECTION */
+.atomic-works-section {
+    background-image: url(images/IMG_20251218_105143120_HDR.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    /* CHANGE: Responsive padding using clamp() */
+    padding: clamp(3rem, 10vw, 150px) 1.5rem clamp(2rem, 8vw, 100px) 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.atomic-works-grid {
+    display: grid;
+    /* CHANGE: Responsive grid - 2 columns on desktop, 1 on tablet, stacks on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(1.5rem, 4vw, 2rem);
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.atomic-works-section-card {
+    padding: clamp(1.5rem, 4vw, 2rem);
+    border-radius: 16px;
+    background-color: #f0ead2;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.atomic-works-section-card:hover {
+    color: white !important;
+    background-color: #6f4518;
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(105, 105, 105, 0.2);
 }
-.content-dropdown{
-   padding: 10px;
-    text-align: center;
-    background-color: #caa883;
-    border-radius: 10px;
-    width: 50vh;
-    margin: 10px;
-}
 
-.list-menu{
-    width: 50vh;
-}
-.tooglecard{
-    display: none;
-}
-.tooglecard1{
-    display: block;
-}
-
-
-.content-section-heading{
-   font-family: 'Geom';
-    font-size: medium;
-    color: black;
+.atomic-works-section-card-number {
+    font-family: 'Segoe UI';
     font-weight: bold;
+    /* CHANGE: Responsive font sizing */
+    font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.atomic-works-section-card-heading {
+    /* CHANGE: Responsive font sizing */
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin: 1rem 0;
+}
+
+.atomic-works-section-card-paragraph {
+    /* CHANGE: Responsive font sizing and line-height */
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.6;
+}
+
+/* CTA SECTION */
+.call-to-action-section {
+    background-color: #0F172A;
     text-align: center;
 }
 
-
-p{
-
-    color: #7A7A7A;
-     font-size: 15px;
-     font-family: 'roboto';
+.call-to-action-section-card {
+    padding: clamp(2rem, 5vw, 3rem);
 }
-li{
-    font-family: 'roboto';
+
+.call-to-action-section-heading {
+    color: #ffffff;
+    font-family: 'Geom';
+    /* CHANGE: Responsive font sizing */
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.call-to-action-section-paragraph {
+    color: white;
+    /* CHANGE: Responsive font sizing and padding */
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    padding: clamp(0.5rem, 2vw, 1rem);
+    margin: 1rem 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.call-to-action-section-button {
+    background-color: #d9d9d9;
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+    border-radius: 1rem;
+    border: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* CHANGE: Responsive font sizing */
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    min-height: 44px;
+}
+
+.call-to-action-section-button:hover {
+    /* CHANGE: Added hover effect for better UX */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+/* CHANGE: Enhanced mobile optimization */
+@media (max-width: 576px) {
+    /* Mobile devices */
+    .atomic-works-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+        margin-bottom: 1rem;
+    }
+    
+    .features-section-card {
+        margin: 5px;
+    }
+    
+    .atomic-works-section-card {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Tablet devices */
+    .atomic-works-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (min-width: 992px) {
+    /* Large screens - optimize spacing */
+    .features-section-card {
+        margin: 15px;
+    }
 }
