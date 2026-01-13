@@ -8,6 +8,7 @@
 html, body {
     width: 100%;
     overflow-x: hidden;
+    background-color: #d9d9d9;
 }
 
 .heading {
@@ -344,4 +345,80 @@ html, body {
 @keyframes scroll-left {
     from { transform: translateX(0); }
     to { transform: translateX(-100%); } 
+}
+
+
+/* author section */
+.about-author-section {
+    position: relative; 
+    padding: 80px 0;
+    overflow: hidden; 
+    background-color: #ffffff; 
+}
+
+
+.about-author-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    background-image: 
+        url('images/the-everymom-atomic-habits.webp'), 
+        url('images/the-everymom-atomic-habits.webp');
+    
+    background-repeat: no-repeat;
+    background-size: 450px auto;
+    background-position: left -150px center, right -150px center;
+    opacity: 0.15; 
+    filter: grayscale(20%); 
+}
+
+
+.about-author-section .container {
+    position: relative;
+    z-index: 2; 
+}
+.author-card {
+    position: relative;
+    z-index: 5;
+    background-color: #f3f3f3; 
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1); 
+    overflow: hidden;
+}
+
+.author-card-image-wrapper {
+    flex: 0 0 40%; 
+    min-height: 300px; 
+}
+
+.author-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: top; 
+}
+.learn-more-icon{
+    border: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    min-height: 44px;
+    background-color: transparent;
+}
+.learn-more-icon:hover{
+     transform: translateY(-5px);
+   
+    
+}
+
+/* RESPONSIVE: When screen is smaller than 768px (Mobile) */
+@media (max-width: 767px) {
+    .author-card-image-wrapper {
+        flex: 0 0 400px; /* Gives the image a fixed height when stacked under text */
+        order: 2; /* Ensures image stays below the text */
+    }
 }
