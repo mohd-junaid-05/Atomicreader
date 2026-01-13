@@ -357,6 +357,7 @@ html, body {
 }
 
 
+
 .about-author-section::before {
     content: "";
     position: absolute;
@@ -375,7 +376,6 @@ html, body {
     opacity: 0.15; 
     filter: grayscale(20%); 
 }
-
 
 .about-author-section .container {
     position: relative;
