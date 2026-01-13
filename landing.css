@@ -357,6 +357,7 @@ html, body {
 }
 
 
+
 .about-author-section::before {
     content: "";
     position: absolute;
@@ -366,8 +367,8 @@ html, body {
     height: 100%;
     z-index: 1; 
     background-image: 
-        url('images/the-everymom-atomic-habits.webp'), 
-        url('images/the-everymom-atomic-habits.webp');
+        url('images/the-everymom-atomic-habits.jpg'), 
+        url('images/the-everymom-atomic-habits.jpg');
     
     background-repeat: no-repeat;
     background-size: 450px auto;
@@ -375,7 +376,6 @@ html, body {
     opacity: 0.15; 
     filter: grayscale(20%); 
 }
-
 
 .about-author-section .container {
     position: relative;
