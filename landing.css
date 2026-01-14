@@ -21,9 +21,11 @@ html, body {
 
 /* NAVIGATION */
 .nav-bar-bg {
-    background-color: #c7a47b;
+    background-color: #d4b490;
 }
-
+.nav-linka:hover{
+    color: white;
+}
 /* HERO SECTION */
 .main-page {
     background-color: #fffaeb;
@@ -451,9 +453,33 @@ html, body {
     transform: translateY(-3px); 
     box-shadow: 0 8px 15px rgba(111, 69, 24, 0.3); 
 }
-
+.btn-cta-custom:active {
+    transform: scale(0.98); 
+}
 
 .rounded-4 {
     border-radius: 25px !important;
 }
 
+
+.pdf-container {
+    background-color: #603808ff; /* Walnut-2 for the 'book cover' edge */
+    padding: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid #d4a276ff; /* Light Bronze */
+    position: relative;
+}
+
+/* Subtle inner shadow to make the iframe look like pages in a book */
+.pdf-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: rgba(0,0,0,0.1); /* The middle 'fold' line */
+    z-index: 10;
+    pointer-events: none;
+}

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atomic habit </title>
+    <link rel="icon" type="image/png" href="images/skill projects logo.png">
 
     <link rel="stylesheet" href="landing.css" />
 
@@ -17,12 +18,12 @@
 </head>
 
 <body>
-    <!-- NAVBAR - Bootstrap responsive navigation -->
-    <nav class="navbar navbar-expand-lg nav-bar-bg py-3">
+    <!-- NAVBAR SECTION -->
+    <nav class="navbar navbar-expand-lg nav-bar-bg py-3 sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="https://www.linkedin.com/posts/mohd-junaid-5248a3314_webdevelopment-frontenddevelopment-html-activity-7401601630565240834-6aA8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE_doSwBhs8rJAnAAA6AOpeemiw4GA6lc8A">
                 <img src="images/skill projects logo.png" style="height: 5vh; width: 5vh; border-radius: 30px;"
-                    alt="Logo" />
+                    alt="Logo" href="" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,26 +32,27 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <!-- CHANGE: Added ms-auto to align nav items to the right -->
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#main">Home</a>
                     <a class="nav-link" href="#features">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#review">Reviews</a>
+                    <a class="nav-link nav-linka " href="#author">Author</a>
+                    <a class="nav-link nav-linka" href="#getbook">GET FREE BOOK</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION - Optimized Bootstrap layout -->
-    <div class="main-page container-fluid py-5">
+    <!-- HERO SECTION  -->
+    <div class="main-page container-fluid py-5" id="main">
         <div class="container">
-            <!-- CHANGE: Added .container inside container-fluid for better max-width control -->
+           
             <div class="row align-items-center g-4 g-lg-5">
-                <!-- CHANGE: Changed g-5 to g-lg-5 for responsive gap spacing -->
+               
 
                 <div class="col-12 col-lg-6 order-2 order-lg-1 d-flex align-items-center">
-                    <!-- CHANGE: Added d-flex align-items-center for vertical centering -->
+                 
                     <div class="hero-section-text">
-                        <!-- CHANGE: Removed separate d-lg-none and d-none d-lg-block divs, 
-                                    now using one responsive element -->
+                        
                         <h1 class="hero-title">
                             Small habits. Big results.
                         </h1>
@@ -60,23 +62,23 @@
                             shows how consistent choices build remarkable results.
                         </p>
                         <div class="d-flex gap-3 flex-wrap">
-                            <!-- CHANGE: Used Bootstrap flex utilities, gap-3 for spacing -->
-                            <button class="btn btn-secondary-cta">Learn More</button>
-                            <button class="btn btn-primary-cta">Buy Now</button>
+                            
+                            <a href="#author"><button class="btn btn-secondary-cta">Learn More</button></a>
+                            <a href="#getbook"><button class="btn btn-primary-cta">Buy Now</button></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-lg-6 order-1 order-lg-2 text-center">
-                    <!-- CHANGE: Used order-1/order-lg-2 instead of inline styles for mobile/desktop reordering -->
+
                     <img src="images/hero-section-image.png" alt="Hero Image" class="img-fluid hero-image" />
-                    <!-- CHANGE: Used img-fluid for automatic responsive sizing -->
+                    
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- FEATURES SECTION - Improved Bootstrap grid layout -->
+    <!-- FEATURES SECTION -->
     <div class="features-section container-fluid" id="features">
         <div class="container">
             <!-- CHANGE: Added .container for max-width constraint on large screens -->
@@ -153,8 +155,8 @@
         </div>
     </div>
 
-    <!-- ATOMIC WORKS SECTION - Bootstrap responsive wrapper -->
-    <div class="atomic-works-section container-fluid">
+    <!-- ATOMIC WORKS SECTION -->
+    <div class="atomic-works-section container-fluid" id="howworks">
         <div class="container">
             <!-- CHANGE: Wrapped custom grid in Bootstrap container for better structure -->
             <h1 class="heading text-center mb-5">How Atomic Habits Works</h1>
@@ -200,7 +202,7 @@
         </div>
     </div>
 
-    <!-- CTA SECTION - Bootstrap responsive structure -->
+    <!-- CTA SECTION -->
     <div class="call-to-action-section container-fluid">
         <div class="container">
             <!-- CHANGE: Added container for max-width control -->
@@ -216,15 +218,15 @@
                             Join thousands of people who have transformed their lives with Atomic Habits.
                             Start small. Think big. Win big.
                         </p>
-                        <button class="call-to-action-section-button">Start Your Journey</button>
+                        <a href="#getbook"><button class="call-to-action-section-button" >Start Your Journey</button></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--Review SECTION IS ADDED-->
-    <div class="review-section">
+    <!--Review SECTION IS ADDED -->
+    <div class="review-section" id="review">
         <h1 class="heading text-center mt-5">
             See How Atomic Habits Transforms Lives
         </h1>
@@ -330,17 +332,10 @@
 
         </div>
     </div>
-    <br>
+    <br><br><br><br>
 
-    <br>
-    <br>
-
-    <br>
-
-
-
-    <!--ABOUT AUTHOR SECTION-->
-    <div class="about-author-section py-5">
+    <!--ABOUT AUTHOR SECTION -->
+    <div class="about-author-section py-5" id="author">
         <div class="container">
             <h1 class="heading text-center mb-5">About the Author</h1>
 
@@ -380,23 +375,13 @@
         </div>
     </div>
 
+    <!-- CTA FINAL SECTION-->
 
-
-
-
-    <!-- CTA final section-->
-
- <section class="cta-final-section py-5">
+ <div class="cta-final-section py-5" id="getbook">
     <div class="container">
         <div class="row align-items-center  bg-white shadow-lg rounded-4 overflow-hidden">
             
-            <div class="col-md-6 p-5">
-                <div class="cta-final-text-card">
-                    <h2 class=" fw-bold mb-3 ">Start your Journey NOW!</h2>
-                    <p class="hero-paragraph">Get your free online copy of Atomic Habits and start building better habits today.</p>
-                    <a href="#" class="btn btn-cta-custom px-5 py-3 shadow-sm">GET FREE COPY!</a>
-                </div>
-            </div>
+            
 
             <div class="col-md-6 p-0">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -413,10 +398,17 @@
   </div>
 </div>
             </div>
+            <div class="col-md-6 p-5">
+                <div class="cta-final-text-card">
+                    <h2 class=" fw-bold mb-3 ">Start your Journey NOW!</h2>
+                    <p class="hero-paragraph">Get your free online copy of Atomic Habits and start building better habits today.</p>
+                    <a href="images/atomic habit pdf.pdf" class="btn btn-cta-custom px-5 py-3 shadow-sm" type="button">GET FREE COPY!</a>
+                </div>
+            </div>
 
         </div>
     </div>
-</section>
+</div>
 
 
 
