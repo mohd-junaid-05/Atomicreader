@@ -415,10 +415,45 @@ html, body {
     
 }
 
-/* RESPONSIVE: When screen is smaller than 768px (Mobile) */
+
 @media (max-width: 767px) {
     .author-card-image-wrapper {
-        flex: 0 0 400px; /* Gives the image a fixed height when stacked under text */
-        order: 2; /* Ensures image stays below the text */
+        flex: 0 0 400px; 
+        order: 2; 
     }
 }
+
+/* cta section */
+
+
+
+.cta-final-section {
+    background-color: rgb(230, 225, 219); 
+}
+
+
+.cta-carousel-img {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.btn-cta-custom {
+   
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+
+.btn-cta-custom:hover {
+    
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 15px rgba(111, 69, 24, 0.3); 
+}
+
+
+.rounded-4 {
+    border-radius: 25px !important;
+}
+
